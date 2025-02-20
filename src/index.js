@@ -24,12 +24,9 @@ const fetchImgURL = async (searchTerm) => {
             default:
                 throw new Error(json.meta.msg || "Error");
         }
-
-        return url;
     } catch (error) {
         console.error("Error:", error.message);
         document.querySelector("img").hidden = true;
-        return null;
     }
 };
 
